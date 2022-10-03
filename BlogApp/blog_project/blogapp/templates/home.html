@@ -2,13 +2,18 @@
 
 {% block content %}
    {% for detail in blog%}
+   
+   
+ 
+
     <div class="post-data">
       <h2><a href="{% url 'post' detail.id %}"> {{detail.title}}</a></h2>  
-
+            <a href="{% url 'update' detail.id %}">Edit Post</a>
+            <a href="{% url 'delete' detail.id %}">Delete Post</a>
       <p> {{detail.author}}</p>
     </div>
     {% endfor %}
-       
+  
     
 {%endblock content %}
 
