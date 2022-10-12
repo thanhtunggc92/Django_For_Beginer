@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<form action="" method ="POST">
+  <h1>{{form.title}}</h1>
+<p>{{form.author}} | {{form.date}}</p> 
+
+<a href="{% url 'article_edit' form.id %}">Edit</a> | <a href="{% url 'article_delete' form.id %}">Delete</a>
+<p>Back to <a href="{% url 'article_list'%}">All Article </a></p>
+</form>
+
+
+
+{% endblock content %}
